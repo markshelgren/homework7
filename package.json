@@ -1,0 +1,24 @@
+{
+  "name": "homework7",
+  "version": "1.0.0",
+  "description": "Homework number 7 - create a command line readme file generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markshelgren/homework7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markshelgren/homework7/issues"
+  },
+  "homepage": "https://github.com/markshelgren/homework7#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "inquirer": "^7.3.3"
+  }
+}

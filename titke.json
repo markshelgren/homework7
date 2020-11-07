@@ -1,0 +1,15 @@
+{
+	"stack": [
+		"HTML"
+	],
+	"contact": "email",
+	"projTitle": "Titke",
+	"projDescription": "descriptiopjn",
+	"projInstallInst": "install",
+	"projUsageInfo": "user",
+	"projContribInst": "contrinute",
+	"projTestInst": "usertest inst",
+	"projLicense": "Apache",
+	"projGithubUser": "markshelgren",
+	"projUserEmail": "markshelgrn@outlook.com"
+}
