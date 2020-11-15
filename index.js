@@ -70,9 +70,9 @@ inquirer
 			
 			## Articles
 
-			["Art of Readme - Learn the art of writing quality READMEs."](https://github.com/noffle/art-of-readme#readme) - *Stephen Whitmore*
+			[Art of Readme - Learn the art of writing quality READMEs.](https://github.com/noffle/art-of-readme#readme) - *Stephen Whitmore*
 			
-			Title: ${userAnswers.projTitle}
+			[# H1](Title: ${userAnswers.projTitle}) 
 			Description: ${userAnswers.projDescription}
 			License badge: ${userAnswers.projLicense}
 			Instructions for installation: ${userAnswers.projInstallInst}
