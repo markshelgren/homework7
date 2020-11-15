@@ -1,7 +1,7 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
 
-let data = "";
+const data = "";
 
 fs.writeFile("README.md", data, function (err) {
 	if (err) throw err;
@@ -72,8 +72,6 @@ inquirer
 			function (err) {
 				if (err) {
 					console.log(err);
-				} else {
-					console.log("Commit logged!");
 				}
 			}
 		);
@@ -85,8 +83,6 @@ inquirer
 			function (err) {
 				if (err) {
 					console.log(err);
-				} else {
-					console.log("Commit logged!");
 				}
 			}
 		);
@@ -100,8 +96,6 @@ inquirer
 			function (err) {
 				if (err) {
 					console.log(err);
-				} else {
-					console.log("Commit logged!");
 				}
 			}
 		);
@@ -113,8 +107,6 @@ inquirer
 			function (err) {
 				if (err) {
 					console.log(err);
-				} else {
-					console.log("Commit logged!");
 				}
 			}
 		);
@@ -128,8 +120,6 @@ inquirer
 			function (err) {
 				if (err) {
 					console.log(err);
-				} else {
-					console.log("Commit logged!");
 				}
 			}
 		);
@@ -143,47 +133,71 @@ inquirer
 			function (err) {
 				if (err) {
 					console.log(err);
-				} else {
-					console.log("Commit logged!");
 				}
 			}
 		);
 
 		// License and Associated Badge
-		fs.appendFile(
-			"README.md",
-			`## Badge \n ${userAnswers.projLicense}` + "\n" + "\n",
-			function (err) {
-				if (err) {
-					console.log(err);
-				} else {
-					console.log("Commit logged!");
-				}
-			}
-		);
-		/* 		fs.appendFile(
-			"README.md",
-			`
-			Table of Contents:  
-			
-			## Articles
+		const linkApache =
+			"[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+		const linkBoost =
+			"[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+		const linkMIT =
+			"[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
 
-			[Art of Readme - Learn the art of writing quality READMEs.](https://github.com/noffle/art-of-readme#readme) - *Stephen Whitmore*
-			
-			[# H1](Title: ${userAnswers.projTitle}) 
-			Description: ${userAnswers.projDescription}
-			License badge: ${userAnswers.projLicense}
-			Instructions for installation: ${userAnswers.projInstallInst}
-			Usage: ${userAnswers.projUsageInfo}
-			License notice: This software is covered under the ${userAnswers.projLicense} license. 
-			Contributors & Contributing: Project Contributors: ${userAnswers.projContribInst}
-			Tests: ${userAnswers.projTestInst}
-			Questions: Please direct all questions to ${userAnswers.projUserEmail}.`,
-			function (err) {
-				console.log(err);
-				if (err) throw err;
-			}
-		); */
+		const linkDefault =
+			"[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
+
+		switch (userAnswers.projLicense) {
+			case "Apache":
+				fs.appendFile(
+					"README.md",
+					`## This application is licensed by \n ${linkApache}` + "\n" + "\n",
+					function (err) {
+						if (err) {
+							console.log(err);
+						}
+					}
+				);
+				break;
+
+			case "Boost":
+				fs.appendFile(
+					"README.md",
+					`## This application is licensed by \n ${linkBoost}` + "\n" + "\n",
+					function (err) {
+						if (err) {
+							console.log(err);
+						}
+					}
+				);
+				break;
+
+			case "MIT":
+				fs.appendFile(
+					"README.md",
+					`## This application is licensed by \n ${linkMIT}` + "\n" + "\n",
+					function (err) {
+						if (err) {
+							console.log(err);
+						}
+					}
+				);
+
+			default:
+				fs.appendFile(
+					"README.md",
+					`## This application is licensed by \n ${linkDefault}` + "\n" + "\n",
+					function (err) {
+						if (err) {
+							console.log(err);
+						}
+					}
+				);
+				break;
+		}
+
+		console.log("After the Switch Statements Correct variable: ");
 	})
 	.catch((error) => {
 		if (error.isTtyError) {
