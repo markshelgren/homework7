@@ -1,20 +1,17 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
 
+let data = "";
+
+fs.writeFile("ReadMe.md", data, function (err) {
+	if (err) throw err;
+	// console.log("Readme.md File Creation Failed");
+});
+
+console.log("Readme.md File Created Successfully");
+
 inquirer
 	.prompt([
-		{
-			type: "checkbox",
-			message: "What languages do you know?",
-			name: "stack",
-			choices: ["HTML", "CSS", "JavaScript", "MySQL"],
-		},
-		{
-			type: "list",
-			message: "What is your preferred method of communication?",
-			name: "contact",
-			choices: ["email", "phone", "telekinesis"],
-		},
 		{
 			type: "input",
 			name: "projTitle",
@@ -49,7 +46,7 @@ inquirer
 			type: "list",
 			message: "Choose the license for your application ?",
 			name: "projLicense",
-			choices: ["Apache", "Boost", "MIT", "The Artistic License 2.0", "WTFPL"],
+			choices: ["Apache", "Boost", "MIT", "The Artistic License 2.0"],
 		},
 		{
 			type: "input",
@@ -62,15 +59,32 @@ inquirer
 			message: "Enter the email address for for questions?",
 		},
 	])
-	.then(function (data) {
-		console.log(data);
-		var filename = data.projTitle.toLowerCase().split(" ").join("") + ".json";
+	.then((answers) => {
+		let userAnswers = answers;
+		console.log(userAnswers);
 
-		fs.writeFile(filename, JSON.stringify(data, null, "\t"), function (err) {
-			if (err) {
-				return console.log(err);
+		fs.appendFile(
+			"ReadMe.md",
+			`
+			Table of Contents:  
+			
+			Title: ${userAnswers.projTitle}
+			Description: ${userAnswers.projDescription}
+			License badge: ${userAnswers.projLicense}
+			Instructions for installation: ${userAnswers.projInstallInst}
+			Usage: ${userAnswers.projUsageInfo}
+			License notice: This software is covered under the ${userAnswers.projLicense} license. 
+			Contributors & Contributing: Project Contributors: ${userAnswers.projContribInst}
+			Tests: ${userAnswers.projTestInst}
+			Questions: Please direct all questions to ${userAnswers.projUserEmail}.`,
+			function (err) {
+				console.log(err);
+				if (err) throw err;
 			}
-
-			console.log("Success!");
-		});
+		);
+	})
+	.catch((error) => {
+		if (error.isTtyError) {
+			console.log("ERROR");
+		} //else
 	});
