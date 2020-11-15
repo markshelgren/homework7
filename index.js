@@ -63,7 +63,105 @@ inquirer
 		const userAnswers = answers;
 		console.log(userAnswers);
 
+		// Add a newline character to each line
+
+		// Project Title
 		fs.appendFile(
+			"README.md",
+			`# ${userAnswers.projTitle}` + "\n" + "\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log("Commit logged!");
+				}
+			}
+		);
+
+		// Project Description
+		fs.appendFile(
+			"README.md",
+			`## Project Description \n ${userAnswers.projDescription}` + "\n" + "\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log("Commit logged!");
+				}
+			}
+		);
+
+		// Installation Instructions
+		fs.appendFile(
+			"README.md",
+			`## Installation Instructions \n ${userAnswers.projInstallInst}` +
+				"\n" +
+				"\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log("Commit logged!");
+				}
+			}
+		);
+
+		// Usage Instructions
+		fs.appendFile(
+			"README.md",
+			`## Usage Instructions \n ${userAnswers.projUsageInfo}` + "\n" + "\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log("Commit logged!");
+				}
+			}
+		);
+
+		// Contribution Instructions
+		fs.appendFile(
+			"README.md",
+			`## Guidelines to Contribute \n ${userAnswers.projContribInst}` +
+				"\n" +
+				"\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log("Commit logged!");
+				}
+			}
+		);
+
+		// Test Instructions
+		fs.appendFile(
+			"README.md",
+			`## Application Testing Instructions \n ${userAnswers.projTestInst}` +
+				"\n" +
+				"\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log("Commit logged!");
+				}
+			}
+		);
+
+		// License and Associated Badge
+		fs.appendFile(
+			"README.md",
+			`## Badge \n ${userAnswers.projLicense}` + "\n" + "\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log("Commit logged!");
+				}
+			}
+		);
+		/* 		fs.appendFile(
 			"README.md",
 			`
 			Table of Contents:  
@@ -85,7 +183,7 @@ inquirer
 				console.log(err);
 				if (err) throw err;
 			}
-		);
+		); */
 	})
 	.catch((error) => {
 		if (error.isTtyError) {

@@ -1,25 +1,20 @@
-# This is the title
+# Create a professional Readme File Generator
 
-## Table of Contents:
+## Project Description 
+ This project was developed to provide an application that can be used to generate a professional readme file.   The command line application uses the inquirer package provided by NPM to lead the user through a series of prompts.  The answers to the prompt are then used to generate a readme file that will look good and correctly describe the project. 
 
-## Articles
+## Installation Instructions 
+ These are the instructions for installing the project 
 
-[Art of Readme - Learn the art of writing quality READMEs.](https://github.com/noffle/art-of-readme#readme) - _Stephen Whitmore_
+## Usage Instructions 
+ These are the instructions that will help the user
 
-### Title: Title
+## Badge 
+ Boost
 
-### Description: Description
+## Guidelines to Contribute 
+ These are the instructions that will enable others to contribute 
 
-### License badge: Apache
+## Application Testing Instructions 
+ these are the instructions to enable users to test the application correctly
 
-### Instructions for installation: installing
-
-### Usage: user skills
-
-### License notice: This software is covered under the Apache license.
-
-### Contributors & Contributing: Project Contributors: contributing
-
-### Tests: test instructions
-
-### Questions: Please direct all questions to markshelgren@outlook.com .
