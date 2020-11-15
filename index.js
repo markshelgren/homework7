@@ -3,7 +3,7 @@ var fs = require("fs");
 
 let data = "";
 
-fs.writeFile("ReadMe.md", data, function (err) {
+fs.writeFile("README.md", data, function (err) {
 	if (err) throw err;
 	// console.log("Readme.md File Creation Failed");
 });
@@ -60,13 +60,17 @@ inquirer
 		},
 	])
 	.then((answers) => {
-		let userAnswers = answers;
+		const userAnswers = answers;
 		console.log(userAnswers);
 
 		fs.appendFile(
-			"ReadMe.md",
+			"README.md",
 			`
 			Table of Contents:  
+			
+			## Articles
+
+			["Art of Readme - Learn the art of writing quality READMEs."](https://github.com/noffle/art-of-readme#readme) - *Stephen Whitmore*
 			
 			Title: ${userAnswers.projTitle}
 			Description: ${userAnswers.projDescription}
