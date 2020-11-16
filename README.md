@@ -1,25 +1,26 @@
-# 11111
+## Project Description 
+ This application was developed to make it easy and quick to generate a readme file for software application development projects.  It uses the inquirer package provided by NPM to lead the user through a series of prompts answering questions relevant to the project.  When the user is finished answering the questions, a readme file is generated with sections and contact information.
 
-## Project Description
+# Readme File Generation
 
-2222222222
+## Usage Instructions 
+  The application is fairly intuitive.  The user who developed the software will know the answers to the questions and the readme file generation is automated.
 
-## Installation Instructions
+## Installation Instructions 
+  The project can be installed by "cloning" it from Gitub.
 
-33333333333333
+## Application Testing Instructions 
+  The application can be tested by executing it and seeing if there is anything that does not work correctly.
 
-## Guidelines to Contribute
+## Guidelines to Contribute 
+  If you would like to contribute to the project, please contact Mark Shelgren at the address listed in the Questions section for Mark Shelgren.
 
-555555555555555555
+Questions? Contact Mark Shelgren at: markshelgren@outlook.com
 
-## Usage Instructions
+## This application is licensed by 
+ [![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
-44444444444444
+## Questions 
+  
+ Github Profile: markshelgren
 
-## Application Testing Instructions
-
-666666666666666666
-
-## This application is licensed by
-
-[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)

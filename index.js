@@ -64,7 +64,7 @@ inquirer
 		console.log(userAnswers);
 
 		// Add a newline character to each line
-
+		console.log("Project title: " + userAnswers.projTitle);
 		// Project Title
 		fs.appendFile(
 			"README.md",
@@ -128,6 +128,31 @@ inquirer
 		fs.appendFile(
 			"README.md",
 			`## Application Testing Instructions \n ${userAnswers.projTestInst}` +
+				"\n" +
+				"\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				}
+			}
+		);
+
+		// Github user Profile
+		fs.appendFile(
+			"README.md",
+			`## Questions \n  \n Github Profile: ${userAnswers.projGithubUser}` +
+				"\n" +
+				"\n",
+			function (err) {
+				if (err) {
+					console.log(err);
+				}
+			}
+		);
+
+		fs.appendFile(
+			"README.md",
+			`Questions? Contact Mark Shelgren at: ${userAnswers.projUserEmail}` +
 				"\n" +
 				"\n",
 			function (err) {
